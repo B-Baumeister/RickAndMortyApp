@@ -1,10 +1,12 @@
-import CharacterCard from './components/CharacterCard/CharacterCard.js';
+import { CharacterCard } from './components/CharacterCard/CharacterCard';
+
 
 const cardContainer = document.querySelector('[data-js="card-container"]');
-/* const searchBarContainer = document.querySelector(
+
+const searchBarContainer = document.querySelector(
   '[data-js="search-bar-container"]'
-); */
-/* const searchBar = document.querySelector('[data-js="search-bar"]');
+);
+const searchBar = document.querySelector('[data-js="search-bar"]');
 const navigation = document.querySelector('[data-js="navigation"]');
 const prevButton = document.querySelector('[data-js="button-prev"]');
 const nextButton = document.querySelector('[data-js="button-next"]');
@@ -13,20 +15,4 @@ const pagination = document.querySelector('[data-js="pagination"]');
 // States
 const maxPage = 1;
 const page = 1;
-const searchQuery = ''; */
-const url = 'https://rickandmortyapi.com/api/character';
-
-async function fetchCharacters() {
-  const result = await fetch(url);
-  const data = await result.json();
-  const sonnenblume = data.results;
-  return sonnenblume;
-}
-
-function render(sonnenblume) {
-  cardContainer.innerHTML = '';
-  sonnenblume.map(CharacterCard).forEach(card => {
-    cardContainer.append(card);
-  });
-}
-fetchCharacters().then(render);
+const searchQuery = '';
