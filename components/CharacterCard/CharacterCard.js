@@ -1,4 +1,4 @@
-export default function CharacterCard(character) {
+export function CharacterCard() {
   const card = document.createElement('li');
 
   card.classList.add('card');
@@ -7,8 +7,8 @@ export default function CharacterCard(character) {
         <div class='card__image-container'>
           <img
             class='card__image'
-            src="${character.image}"
-            alt="${character.name}"
+            src={${character.image}}
+            alt={${character.name}}
           />
           <div class='card__image-gradient'></div>
         </div>
@@ -23,6 +23,7 @@ export default function CharacterCard(character) {
             <dd class='card__info-description'>${character.episode.length}</dd>
           </dl>
         </div>
-`;
-  return card;
+      ;
+
+  return card;`;
 }
